@@ -1,0 +1,34 @@
+body{
+    background: linear-gradient(to right,black,grey);
+    font-size: larger;
+
+}
+
+.todo-list{
+    width:300px;
+    height:150px;
+    color:darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    margin-left: 500px;
+    margin-top: 200px;
+    
+}
+.todo-list.label input[type="checkbox"]:checked ~ span::before{
+    position:absolute;
+    content:"";
+    top:50%;
+    width:100%;
+    height:1px;
+    background:#f1faee;
+    transform: scaleX(0);
+    transform-origin: right;
+    transform: transform 0.5s;
+}
+.todo-list.label input[type="checkbox"]:checked ~ span{
+    color:#585b57;
+}
+.todo-list.label input[type="checkbox"]:checked ~ span::before{
+    transform: scaleX(1);
+    transform-origin:left;
+}
